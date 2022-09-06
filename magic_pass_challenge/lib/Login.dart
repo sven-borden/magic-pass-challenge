@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
 
   ElevatedButton loginElevatedButton = ElevatedButton(
     onPressed: () {
-      _signIn();
+
     },
     child: Text(
       Translation.loginButtonLabel,
