@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magic_pass_challenge/HomePage.dart';
+import 'package:magic_pass_challenge/src/constants/Margins.dart';
 import 'package:magic_pass_challenge/src/constants/Translation.dart';
 
 class LoginPage extends StatefulWidget {
@@ -13,42 +14,71 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+  void _signIn() {
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const HomePage(), maintainState: true),
+            (Route<dynamic> route) => false
+    );
+  }
+
+  TextField magicPassTextField = const TextField(
+    decoration: InputDecoration(
+    border: OutlineInputBorder(),
+    labelText: Translation.loginMagicPassNumberLabel,
+    hintText: Translation.loginMagicPassNumberHint
+    )
+  );
+
+  TextField magicPassPasswordTextField = const TextField(
+    decoration: InputDecoration(
+      border: OutlineInputBorder(),
+      labelText: Translation.loginPasswordLabel,
+      hintText: Translation.loginPasswordHint
+    )
+  );
+
+  TextButton forgotPasswordTextButton = TextButton(
+    onPressed: () {
+      //TODO: Forgot password goes here
+    },
+    child: const Text(
+      Translation.loginForgotPasswordLabel,
+    )
+  );
+
+  ElevatedButton loginElevatedButton = ElevatedButton(
+    onPressed: () {
+      _signIn();
+    },
+    child: Text(
+      Translation.loginButtonLabel,
+    )
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
+      child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: Translation.loginMagicPassNumberLabel,
-                    hintText: Translation.loginMagicPassNumberHint
-                )
+            Container(
+              margin: Margins.defaultMargin,
+              child: magicPassTextField,
             ),
-            const TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: Translation.loginPasswordLabel,
-                    hintText: Translation.loginPasswordHint
-                )
+            Container(
+              margin: Margins.defaultMargin,
+              child: magicPassPasswordTextField,
             ),
-            TextButton(
-              onPressed: () {
-                //TODO: Forgot password goes here
-              },
-              child: const Text(
-                Translation.loginForgotPasswordLabel,
-              )
+            Container(
+              margin: Margins.defaultMargin,
+              child: forgotPasswordTextButton,
             ),
-            OutlinedButton(
-              onPressed: () {
-                //TODO: Add login press
-              },
-              child: const Text(
-                Translation.loginButtonLabel,
-              )
+            Container(
+              margin: Margins.defaultMargin,
+              child:loginElevatedButton,
             )
           ],
         )
