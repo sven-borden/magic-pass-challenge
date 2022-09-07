@@ -25,9 +25,10 @@ class _LoginPageState extends State<LoginPage> {
 
   TextField magicPassTextField = const TextField(
     decoration: InputDecoration(
-    border: OutlineInputBorder(),
-    labelText: Translation.loginMagicPassNumberLabel,
-    hintText: Translation.loginMagicPassNumberHint
+      border: OutlineInputBorder(),
+      labelText: Translation.loginMagicPassNumberLabel,
+      hintText: Translation.loginMagicPassNumberHint,
+
     )
   );
 
@@ -36,24 +37,6 @@ class _LoginPageState extends State<LoginPage> {
       border: OutlineInputBorder(),
       labelText: Translation.loginPasswordLabel,
       hintText: Translation.loginPasswordHint
-    )
-  );
-
-  TextButton forgotPasswordTextButton = TextButton(
-    onPressed: () {
-      //TODO: Forgot password goes here
-    },
-    child: const Text(
-      Translation.loginForgotPasswordLabel,
-    )
-  );
-
-  ElevatedButton loginElevatedButton = ElevatedButton(
-    onPressed: () {
-
-    },
-    child: Text(
-      Translation.loginButtonLabel,
     )
   );
 
@@ -74,11 +57,23 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Container(
               margin: Margins.defaultMargin,
-              child: forgotPasswordTextButton,
+              child: TextButton(
+                  onPressed: () {
+                    //TODO: Forgot password goes here
+                  },
+                  child: const Text(
+                    Translation.loginForgotPasswordLabel,
+                  )
+              ),
             ),
             Container(
               margin: Margins.defaultMargin,
-              child:loginElevatedButton,
+              child: ElevatedButton(
+                  onPressed: _signIn,
+                  child: const Text(
+                    Translation.loginButtonLabel,
+                  )
+              ),
             )
           ],
         )
