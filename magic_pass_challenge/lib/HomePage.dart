@@ -13,19 +13,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
 
   void _addStation() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => AddStationPage())
+      MaterialPageRoute(builder: (context) => const AddStationPage())
     );
-  }
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
   }
 
   @override
@@ -48,8 +41,8 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _addStation,
         tooltip: Translation.homeFloatingActionAddStationTooltip,
-        child: const Icon(Icons.add),
         heroTag: 'addStationHeroTag',
+        child: const Icon(Icons.add),
       ),
     );
   }
