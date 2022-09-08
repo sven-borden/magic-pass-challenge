@@ -25,3 +25,7 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+magic_pass_challenge/lib/firebase_options.dart
+magic_pass_challenge/ios/Runner/GoogleService-Info.plist
+magic_pass_challenge/ios/firebase_app_id_file.json
+magic_pass_challenge/android/app/google-services.json
