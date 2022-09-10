@@ -4,9 +4,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:magic_pass_challenge/HomePage.dart';
 
-
 class AuthGateService extends StatelessWidget {
-  const AuthGateService({super.key});
+
+  AuthGateService({super.key});
+
+  final _remoteConfig = FirebaseRemoteConfig.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -50,8 +52,8 @@ class AuthGateService extends StatelessWidget {
               providerConfigs: [
                 EmailProviderConfiguration(),
                 GoogleProviderConfiguration(
-                  clientId: remoteConfig.getString('google_service_client_id').isNotEmpty
-                      ? remoteConfig.getString('google_service_client_id')
+                  clientId: _remoteConfig.getString('google_service_client_id').isNotEmpty
+                      ? _remoteConfig.getString('google_service_client_id')
                       : "",
                 ),
               ]
