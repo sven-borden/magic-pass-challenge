@@ -1,6 +1,7 @@
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:magic_pass_challenge/src/services/AuthGate.dart';
+import 'package:magic_pass_challenge/src/services/AuthGateService.dart';
 import 'firebase_options.dart';
 
 
@@ -9,6 +10,7 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   runApp(const MyApp());
 }
 
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const AuthGate(),
+      home: AuthGateService(),
     );
   }
 }
