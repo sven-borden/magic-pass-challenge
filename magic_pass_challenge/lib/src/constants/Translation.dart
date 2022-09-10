@@ -1,6 +1,6 @@
 class Translation {
-  static const loginMagicPassNumberLabel = "Magic pass number";
-  static const loginMagicPassNumberHint = "MP22-123456";
+  static const loginEmailLabel = "Email";
+  static const loginEmailHint = "myemail@gmail.com";
   static const loginPasswordLabel = "Strong password";
   static const loginPasswordHint = "Password";
   static const loginForgotPasswordLabel = "Forgot password";

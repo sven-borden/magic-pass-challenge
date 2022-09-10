@@ -49,7 +49,8 @@ android {
         applicationId "ch.borden.app.magic_pass_challenge"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 19 // Minimum version to run FlutterFire UI
+        multiDexEnabled true // Needed to run FlutterFire UI
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
