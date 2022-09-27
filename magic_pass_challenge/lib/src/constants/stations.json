@@ -1,54 +1,69 @@
-[
-  {
-    "name": "Saas-Fee / Saas-Almagell",
-    "canton": "VS"
-  },
-  {
-    "name": "Grimentz-Zinal",
-    "canton": "VS"
-  },
-  {
-    "name": "Arolla",
-    "canton": "VS"
-  },
-  {
-    "name": "Evolène",
-    "canton": "VS"
-  },
-  {
-    "name": "La Forclaz",
-    "canton": "VS"
-  },
-  {
-    "name": "La Lécherette",
-    "canton": "VD"
-  },
-  {
-    "name": "Leysin",
-    "canton": "VD"
-  },
-  {
-    "name": "Les Mosses",
-    "canton": "VD"
-  },
-  {
-    "name": "Leysin",
-    "canton": "VD"
-  },
-  {
-    "name": "Les Diablerets",
-    "canton": "VD"
-  },
-  {
-    "name": "St-Luc / Chandolin",
-    "canton": "VS"
-  },
-  {
-    "name": "Anzère",
-    "canton": "VS"
-  },
-  {
-    "name": "Leukerbad",
-    "canton": "VS"
-  }
-]
+{
+  "stations": [
+    {
+      "id": 1,
+      "name": "Saas-Fee / Saas-Almagell",
+      "canton": "VS"
+    },
+    {
+      "id": 2,
+      "name": "Grimentz-Zinal",
+      "canton": "VS"
+    },
+    {
+      "id": 3,
+      "name": "Arolla",
+      "canton": "VS"
+    },
+    {
+      "id": 4,
+      "name": "Evolène",
+      "canton": "VS"
+    },
+    {
+      "id": 5,
+      "name": "La Forclaz",
+      "canton": "VS"
+    },
+    {
+      "id": 6,
+      "name": "La Lécherette",
+      "canton": "VD"
+    },
+    {
+      "id": 7,
+      "name": "Leysin",
+      "canton": "VD"
+    },
+    {
+      "id": 8,
+      "name": "Les Mosses",
+      "canton": "VD"
+    },
+    {
+      "id": 9,
+      "name": "Leysin",
+      "canton": "VD"
+    },
+    {
+      "id": 10,
+      "name": "Les Diablerets",
+      "canton": "VD"
+    },
+    {
+      "id": 11,
+      "name": "St-Luc / Chandolin",
+      "canton": "VS"
+    },
+    {
+      "id": 12,
+      "name": "Anzère",
+      "canton": "VS"
+    },
+    {
+      "id": 13,
+      "name": "Leukerbad",
+      "canton": "VS"
+    }
+  ]
+}
