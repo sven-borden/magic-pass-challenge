@@ -17,9 +17,9 @@ class AddStationPage extends StatefulWidget{
 
 class _AddStationPageState extends State<AddStationPage> {
 
-  List<String> stationData = [];
+  List stationData = [];
 
-  Future<List> getStationData() async {
+  Future<void> getStationData() async {
     final String response = await rootBundle.loadString('lib/src/constants/stations.json');
     final data = await json.decode(response);
 
@@ -27,7 +27,6 @@ class _AddStationPageState extends State<AddStationPage> {
       stationData = data["stations"];
     });
 
-    return data;
   }
 
   @override
@@ -59,9 +58,9 @@ class _AddStationPageState extends State<AddStationPage> {
                     return Card(
                       margin: const EdgeInsets.all(10),
                       child: ListTile(
-                        leading: Text(stationData[index][0]),
-                        title: Text(stationData[index][1]),
-                        subtitle: Text(stationData[index][2]),
+                        leading: Text(stationData[index]["id"].toString()),
+                        title: Text(stationData[index]["name"]),
+                        subtitle: Text(stationData[index]["canton"]),
                       ),
                     );
                   },
